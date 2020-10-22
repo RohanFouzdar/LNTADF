@@ -1,0 +1,38 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobSourceLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "in",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Books.xlsx",
+				"container": "inputdata"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "BookId",
+				"type": "String"
+			},
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Author",
+				"type": "String"
+			},
+			{
+				"name": "Price",
+				"type": "String"
+			}
+		]
+	}
+}
